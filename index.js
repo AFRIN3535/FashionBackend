@@ -3,6 +3,8 @@ const app = express()
 const mongoose = require("mongoose")
 const dotEnv = require("dotenv")
 const userRoute = require("./route/userRoute")
+const cors = require("cors")
+app.use(cors({origin:"*"}))
 
 dotEnv.config()
 app.use(express.json())
